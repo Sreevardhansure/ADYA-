@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>scroll</title>
+    <link rel="stylesheet" href="srolltext.css">
+</head>
+<body>
+    <h3>ABOUT US</h3>
+    <h2 class="text">ABOUT US</h2>
+    <section>
+        <h2 class="innerText">ABOUT US</h2>
+    </section>
+    <div class="container">
+        <h2>Welcome to Adya Study Circle: Your Pathway to Telugu Excellence!</h2>
+        <p>
+            🌟 **Unlock the Beauty of Telugu Literature and Grammar:**  
+  Embark on a journey that unravels the enchanting world of Telugu literature, grammar, and methodology with Adya Study Circle. We are dedicated to enriching your understanding and appreciation of the rich Telugu language.
+  
+  📚 **Discover Telugu's Treasures with Teacher Sure Sreenivasulu:**  
+  At Adya Study Circle, we are honored to have the esteemed Teacher Sure Sreenivasulu as your guide. With his profound knowledge and passion for Telugu, Teacher Sure Sreenivasulu will take you on a captivating exploration of Telugu literature, grammar, and methodology.
+  
+  🖥️ **Online Classes for the Modern Learner:**  
+  We understand the demands of your busy lifestyle, which is why we offer convenient and interactive online classes. No matter where you are, you can now access our comprehensive courses at your own pace. Our user-friendly platform ensures that learning Telugu has never been easier.
+  
+  📝 **Structured Curriculum, Personalized Learning:**  
+  Our courses are meticulously designed to cater to learners of all levels. Whether you're a beginner or looking to deepen your understanding, we have the right program for you. Our personalized approach ensures that you receive the guidance you need to excel.
+  
+  💡 **What We Offer:**  
+  - **Telugu Literature:** Dive into the world of Telugu literary masterpieces. Explore classic and contemporary works that have shaped Telugu culture.
+  - **Telugu Grammar:** Demystify the complexities of Telugu grammar. Learn the rules and nuances that make this language unique and expressive.
+  - **Telugu Methodology:** Discover effective techniques for teaching and communicating in Telugu. Enhance your language skills to share your knowledge with others.
+  
+  🌐 **Connect with a Community:**  
+  Join a vibrant community of Telugu language enthusiasts. Connect with fellow learners, share insights, and engage in discussions that deepen your understanding of the language.
+  
+  🎓 **Experience the Adya Advantage:**  
+  - Engaging and interactive online classes
+  - Expert guidance from Teacher Sure Sreenivasulu
+  - Comprehensive curriculum for all levels
+  - Convenient scheduling to fit your lifestyle
+  
+  📞 **Contact Us Today:**  
+  Ready to embark on your Telugu language journey? Contact us today to learn more about our courses, schedules, and enrollment options. We're here to answer your questions and guide you toward a fulfilling Telugu learning experience.
+  
+  At Adya Study Circle, we're not just teaching Telugu; we're fostering a connection to the soul of a language. Join us and let the beauty of Telugu language and literature enrich your life.
+  
+  Enroll now and let the magic of Telugu unfold before you!
+        </p>
+    </div>
+    <script>
+        let section = document.querySelector('section');
+        let text=document.querySelector('.text');
+        let innerText=document.querySelector('.innerText')
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            section.style.clipPath = "circle("+ value +"px at center center)";
+            text.style.left=100 - value /5+ '%'
+            innerText.style.left=100 - value /5+ '%'
+        })
+    </script>
+</body>
+</html>

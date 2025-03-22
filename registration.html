@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="registeration.css">
+</head>
+<body> 
+    <div class="earmark-app">
+        <header class="header">
+          <h1 class="header-logo">Registration</h1>
+          <div class="header-content">
+            <br><br>
+         
+            <!--<div class="header-search">
+              <input type="text" class="search-field" placeholder="Search..." />
+              <button type="submit" class="search-btn">
+                <i class="ph-magnifying-glass-bold"></i>
+              </button>
+            </div>-->
+            
+            <button class="header-avatar">
+              <span class="header-avatar-img"></span>
+              <span class="header-avatar-name">ADYA Study Circle</span>
+            </button>
+          </div>
+        </header>
+        
+                
+      </div>
+      <div class="my"><br> <p>To join the class Register now</p></div>
+      <form method="post" name="google-sheet">
+    <div class="center">
+    <div class="container">
+        <div class="myCard">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="myLeftCtn"> 
+                        <form class="myForm text-center">
+                            <header>Create new account</header>
+                            <div class="form-group">
+                                <i class="fas fa-user"></i>
+                                <input class="myInput" type="text" placeholder="Username" id="username" required name="username"> 
+                            </div>
+
+                            <div class="form-group">
+                                
+                                <i class="fas fa-envelope"></i>
+                                <input class="myInput" placeholder="Phone number" type="text" id="email" required name="phone number"> 
+                            </div>
+
+                            <div class="form-group">
+                                
+                                <i class="fas fa-lock"></i>
+                                <input class="myInput" type="password" id="password" placeholder="Password" required name="password"> 
+                            </div>
+
+                            <div class="form-group">
+                                <label>
+                                    <input id="check_1" name="check_1"  type="checkbox" required><small> I read and agree to Terms & Conditions</small></input> 
+                                    <div class="invalid-feedback">You must check the box.</div>
+                                </label>
+                            </div>
+                            <div class="content-header-info">
+                                Click below to pay ↧
+                               <a href="#" style="margin-top: 10%;" class="link">
+                                <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_MhREZqaVo0TrVX" async> </script> </form></a>
+                             </div>
+                             <!--<form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_MhROZKc37UAvSh" async> </script> </form>-->
+                            <input type="submit" class="butt" value="CREATE ACCOUNT" name="submit">
+                                
+                            
+                            
+                            
+                        </form>
+                    </form>
+                    </div>
+                </div> 
+                <div class="col-md-6">
+                    <div class="myRightCtn">
+                            <div class="box"><header>ADYA STUDYCIRCLE</header><br>
+                            <h6>Welcome to Adya Study circle</h6><br>
+                            <h6>Explore the Power of Learning with ADYA STUDY CIRCLE...</h6><br>
+                            
+                            <button class="open-modal-btn" onclick="openModal()">syllabus</button>
+                                <a href="Syllabuspage.html">Syllabus</a>
+                           
+                        <!-- The modal container -->
+                            <div class="modal-container" id="modal">
+                            <div class="modal-content">
+                            <span class="close-modal-btn" onclick="closeModal()">&times;</span>
+                            <img src="sahityam.jpg" alt="Popup Image">
+                             </div>
+                             </div>
+                             <div>
+                                <a href="ADYA.php" class="go-to-home" id="goToHomeButton">
+                                <span>GO TO HOME</span>
+                                <div class="arrow"></div>
+                              </a></div>
+                             
+                             
+                     <script>function openModal() {
+             document.getElementById('modal').style.display = 'block';
+                 }
+    
+             function closeModal() {
+                  document.getElementById('modal').style.display = 'none';
+             }
+             // Smooth scrolling to the top of the page when the button is clicked
+document.getElementById("goToHomeButton").addEventListener("click", function() {
+  window.scroll({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzlBLLKnqsoy2onjskrMqtzDAlHmQ2DSU3C2HaLSyE50WXU77q5ovcfqDYHhAsF-czHcg/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+
+            </script>
+
+                            
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+</div>
+</div>    
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
+

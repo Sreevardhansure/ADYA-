@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="Aboutus.css">
+    <link rel="icon" href="cropbg.png" type="image/x-icon"color="#ffff">
+</head>
+<body>
+    <nav style="position: fixed;">
+        <img src="cropbg.png" class="user-pic" onclick="toggleMenu()">
+        <div class="span1"><span style="color:black">ADYA</span></div>
+         <div class="sub-menu-wrap" id="subMenu">
+           <div class="sub-menu">
+             <div class="user-info">
+               <img src="cropbg.png" class="dropnav">
+               <h4 style="color: black;">ADYA Studycircle</h4>
+             </div>
+             <hr>
+             <a href="registration.html" class="sub-menu-link">
+               <img src="register.png" alt="error" class="dropnav"><p> Register now</p><span>﹥</span></a>
+               <a href="ADYA.php" class="sub-menu-link">
+                 <img src="avatar.png" alt="error" class="dropnav"><p> Login</p><span>﹥</span></a>
+             <a href="Syllabuspage.html" class="sub-menu-link">
+                 <img src="book.png" alt="error" class="dropnav"><p> Syllabus</p><span>﹥</span></a>
+             <a href="contactus.html" class="sub-menu-link">
+                   <img src="call.png" alt="error" class="dropnav"><p> contact us</p><span>﹥</span></a>
+             </div>
+         </div>
+       </nav>
+     
+     <script>
+       let subMenu=document.getElementById("subMenu");
+       function toggleMenu(){
+         subMenu.classList.toggle("open-menu");
+       }
+     </script>
+    <a href="ADYA.php" class="go-to-home">Go to Home</a>
+    <h3><pre>ABOUT US</pre></h3>
+    <h2 class="text">ABOUT US</h2>
+    <section>
+        <h2 class="innerText">ABOUT US</h2>
+    </section>
+
+    <div class="container">
+        <h2>Welcome to Adya Study Circle: Your Pathway to Telugu Excellence!</h2><br><br><br>
+        <br><br><br><br><br><br><br>
+        <div class="detel">
+            <h1>Ｉ,m Sure <span>Sreenivasulu</span></h1>
+            <p>I will guide you to become sucess in your life
+              <br>contact us:9866367300
+            </p>   
+            <a href="registration.html">Join the class</a>
+        
+        </div>
+      
+        <div class="images">
+            <img src="splashbg.png" alt="error" class="shape">
+            <img src="profile.png" alt="error" class="profile">
+        </div>
+    </div>
+  
+    <script>
+        let section = document.querySelector('section');
+        let text=document.querySelector('.text');
+        let innerText=document.querySelector('.innerText')
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            section.style.clipPath = "circle("+ value +"px at center center)";
+            text.style.left=100 - value /5+ '%'
+            innerText.style.left=100 - value /5+ '%'
+        })
+    </script>
+  <!--swiper slides-->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="ari_pods sections">
+                <div class="section_container">
+                    <div class="image">
+                    <img src="glowing-star_1f31f.gif" alt="error">
+                </div>
+                <div class="textswap">
+                    <p class="title">Unlock the Beauty of Telugu Literature and Grammar</p>
+                    <p class="description">
+                        Embark on a journey that unravels the enchanting world of Telugu
+                     literature, grammar, 
+                    and methodology with Adya Study Circle. We are dedicated to enriching
+                     your understanding and appreciation of the rich Telugu language.
+                    </p>
+                </div></div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="beats sections">
+                <div class="section_container"><div class="image">
+                    <img src="transform class.gif" alt="error">
+
+                </div>
+                <div class="textswap">
+                    <p class="title">Online Classes for the Modern Learner:</p>
+                    <p class="description">We understand the demands of your busy lifestyle, which is why 
+                        we offer convenient and interactive online classes.
+                         No matter where you are, you can now access our comprehensive courses at your own pace.
+                          Our user-friendly platform ensures that learning Telugu has never been easier.</p>
+                </div>
+                
+            </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="apple_watch sections">
+                <div class="section_container">
+                    <div class="image">
+                        <img src="papershand.gif" alt="error">
+                    </div>
+
+                        <div class="textswap">
+                            <p class="title">Structured Curriculum, Personalized Learning: </p>
+                            <p class="description">Our courses are meticulously designed to cater to learners of all levels.
+                                Whether you're a beginner or looking to deepen your understanding, we have the right program for you. 
+                                Our personalized approach ensures that you receive the guidance you need to excel.</p>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="galaxy_buds sections">
+                <div class="section_container">
+                    <div class="image">
+                        <img src="tesseract_bulb_animation.gif" alt="error">
+
+
+                    </div>
+                    <div class="textswap">
+                        <p class="title">Experience the Adya Advantage:</p>
+                        <p class="description">- Engaging and interactive online classes
+                            - Expert guidance from Teacher Sure Sreenivasulu 
+                            - Comprehensive curriculum for all levels 
+                           - Convenient scheduling to fit your lifestyle</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="beats sections">
+                <div class="section_container"><div class="image">
+                    <img src="advertiser_dribbble.gif" alt="error">
+
+
+                </div>
+                <div class="textswap">
+
+                      <p class="title">Connect with a Community<hr></p><br>
+                      <p class="description">
+                         Join a vibrant community of Telugu language enthusiasts. 
+                          Connect with fellow learners, share insights, and engage in
+                          discussions that deepen your understanding of the language
+                        </p>
+                
+               </div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="swiper-slide">
+            <div class="galaxy_buds sections">
+                <div class="section_container">
+                    <div class="image">
+                        <img src="books.gif" alt="error">
+
+                </div>
+                <div class="textswap">
+                    <div class="textswap">
+                        <p class="title" style="font-weight:150; color: white;">Discover Telugu's Treasures with Teacher Sure Sreenivasulu:</p>
+                        <p class="description" style="font-weight: 75; color: white;">At Adya Study Circle, we are honored to have the esteemed Teacher Sure Sreenivasulu as your guide.
+                            With his profound knowledge and passion for Telugu, Teacher Sure Sreenivasulu will take you 
+                            on a captivating exploration of Telugu literature,
+                             grammar, and methodology</p>
+                    </div>
+                </div></div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="beats sections">
+                <div class="section_container"><div class="image">
+                    <img src="cap.gif" alt="error">
+                </div>
+                <div class="textswap">
+                    <p class="title">What We Offer:<span>Telugu Literature:</p>
+                    <p class="description">  Dive into the world of Telugu literary masterpieces. 
+                        Explore classic and contemporary works that have shaped Telugu culture.
+                         <span>Telugu Grammar:</span> Demystify the complexities of Telugu grammar. 
+                         Learn the rules and nuances that make this language unique and expressive.
+                          <span>Telugu Methodology: </span>Discover effective techniques for teaching and communicating in Telugu. 
+                          Enhance your language skills to share your knowledge with others.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="apple_watch sections" >
+                <div class="section_container">
+                    <div class="image">
+                        <img src="contactus.gif" alt="">
+                    </div>
+                    <div class="textswap">
+                        <p class="title">Contact Us Today</p>
+                        <p class="description">
+                            Ready to embark on your Telugu language journey? Contact us today to 
+                            learn more about our courses, schedules, and enrollment options.
+                             We're here to answer your questions and guide you toward a fulfilling Telugu learning experience.
+                              At Adya Study Circle, we're not just teaching Telugu; we're fostering a connection to the soul of a language.
+                               Join us and let the beauty of Telugu language and literature enrich your life. 
+                            Enroll now and let the magic of Telugu unfold before you!
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="swiper-pagination">
+
+    </div>
+</div>
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+var swiper = new Swiper('.swiper-container',{
+direction: 'vertical',
+sliderPerView: 1,
+spaceBetween: 0,
+mousewheel: true,
+pagination: {
+el:'.swiper-pagination',
+type: 'progressbar',
+}
+}) 
+
+
+</script>
+</body>
+</html>

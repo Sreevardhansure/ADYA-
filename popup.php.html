@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Drag and Drop File Upload</title>
+</head>
+<body>
+
+<div class="drop-zone" id="dropZone">
+    <p>Drag and drop files here or click to select</p>
+</div>
+
+<script>
+var dropZone = document.getElementById('dropZone');
+
+dropZone.addEventListener('dragover', function(event) {
+    event.preventDefault();
+    dropZone.classList.add('drag-over');
+});
+
+dropZone.addEventListener('dragleave', function(event) {
+    event.preventDefault();
+    dropZone.classList.remove('drag-over');
+});
+
+dropZone.addEventListener('drop', function(event) {
+    event.preventDefault();
+    dropZone.classList.remove('drag-over');
+
+    var files = event.dataTransfer.files;
+    handleFiles(files);
+});
+
+dropZone.addEventListener('click', function() {
+    var input = document.createElement('input');
+    input.type = 'file';
+    input.multiple = true;
+    input.accept = 'image/*';
+
+    input.addEventListener('change', function(event) {
+        var files = event.target.files;
+        handleFiles(files);
+    });
+
+    input.click();
+});
+
+function handleFiles(files) {
+    var username = prompt('Enter your username:');
+    
+    if (!username) {
+        return;
+    }
+
+    var formData = new FormData();
+
+    for (var i = 0; i < files.length; i++) {
+        formData.append('files[]', files[i]);
+    }
+
+    formData.append('username', username);
+
+    // Send the formData to the server for processing (AJAX or fetch)
+    // Example: Use fetch to send the formData to a server-side script
+    fetch('upload.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(message => {
+        alert(message);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+</script>
+
+<style>
+.drop-zone {
+    width: 300px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.drag-over {
+    border-color: #007bff;
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.drop-zone p {
+    margin: 0;
+}
+</style>
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+
+    // Create a directory for the user if it doesn't exist
+    if (!file_exists($username)) {
+        mkdir($username);
+    }
+
+    $uploadedFiles = $_FILES['files'];
+
+    $uploadSuccess = true;
+    $message = '';
+
+    foreach ($uploadedFiles['name'] as $key => $name) {
+        $tmpName = $uploadedFiles['tmp_name'][$key];
+        $destination = $username . '/' . $name;
+
+        if (move_uploaded_file($tmpName, $destination)) {
+            $message .= "File '$name' uploaded successfully.\n";
+        } else {
+            $uploadSuccess = false;
+            $message .= "Error uploading file '$name'.\n";
+        }
+    }
+
+    if ($uploadSuccess) {
+        echo "Files uploaded successfully:\n" . $message;
+    } else {
+        echo "Upload failed:\n" . $message;
+    }
+}
+?>
+
+</body>
+</html>

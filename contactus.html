@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>contactus</title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <link rel="icon" href="cropbg.png" type="image/x-icon"color="#ffff">
+    <link rel="stylesheet" href="contactus.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="background-size: cover;">
+  <nav style="position: fixed;">
+    <img src="cropbg.png" class="user-pic" onclick="toggleMenu()">
+    <span style=" position: fixed;
+       top:10%;
+       right: 1.8%;
+       display: flex;
+       z-index: 100;
+       color: black;">ADYA</span>
+     <div class="sub-menu-wrap" id="subMenu">
+       <div class="sub-menu">
+         <div class="user-info">
+           <img src="cropbg.png" class="dropnav">
+           <h3 style="color: black;">ADYA Studycircle</h3>
+         </div>
+         <hr>
+         <a href="registration.html" class="sub-menu-link">
+           <img src="register.png" alt="error" class="dropnav"><p> Register now</p><span>﹥</span></a>
+           <a href="ADYA.php" class="sub-menu-link">
+             <img src="avatar.png" alt="error" class="dropnav"><p> Login</p><span>﹥</span></a>
+         <a href="Syllabuspage.html" class="sub-menu-link">
+             <img src="book.png" alt="error" class="dropnav"><p> Syllabus</p><span>﹥</span></a>
+         <a href="contactus.html" class="sub-menu-link">
+               <img src="call.png" alt="error" class="dropnav"><p> contact us</p><span>﹥</span></a>
+         </div>
+     </div>
+   </nav>
+ 
+ <script>
+   let subMenu=document.getElementById("subMenu");
+   function toggleMenu(){
+     subMenu.classList.toggle("open-menu");
+   }
+ </script>
+ <a href="ADYA.php" class="go-to-home">Go to Home</a>
+    <div class="landing_page">
+        <div class="responsive-container-block big-container">
+          <div class="gradient"></div>
+          <img class="bg-img" id="iq5bf" src="callcenterorgflip1.png">
+          <div class="responsive-container-block container">
+            <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 left-one">
+              <div class="content-box">
+                <p class="text-blk section-head">
+                  ContactUs
+                </p>
+                <p class="text-blk section-subhead">
+                  Let's start a Conversation<br>
+                  Ask how can we help you:<br>
+                  Support all me in other platforms
+                </p>
+                <div class="icons-container">
+                  <a class="share-icon">
+                    <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-twitter.png">
+                  </a>
+                  <a class="share-icon">
+                    <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-facebook.png">
+                  </a>
+                  <a class="share-icon">
+                    <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-google.png">
+                  </a>
+                  <a class="share-icon">
+                    <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-instagram.png">
+                  </a>
+                 
+                </div>
+              </div>
+            </div>
+            <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6 right-one" id="i1zj">
+              <form class="form-box" action="https://formspree.io/f/xvojalpl" method="POST" >
+                 <div class="container-block form-wrapper">
+                  <p class="text-blk contactus-head">
+                    <a class="link" href="contactus.html">
+                    </a>
+                    Let's Get in Touch
+                  </p>
+                  <p class="text-blk contactus-subhead">
+                    We will get back to you in 24 hours
+                  </p>
+                  <div class="responsive-container-block">
+                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" >
+                      <input class="input"  id="name"name="FirstName" placeholder="First Name" required>
+                    </div>
+                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i1ro7">
+                      <input class="input" id="lastname"name="Last Name" placeholder="Last Name" required>
+                    </div>
+                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-6 wk-ipadp-6 emial">
+                      <input class="input"id="email" name="Email" placeholder="Email" required>
+                    </div>
+                    <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                      <input class="input"  id="phone" name="PhoneNumber" placeholder="Phone Number" required>
+                    </div>
+                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" >
+                      <textarea aria-placeholder="Type message here"  name="message"class="textinput" id="message" placeholder="Type message here" required></textarea>
+                    </div>
+                  </div>
+                  <button class="submit-btn" type="submit" id="btn">
+                    Send
+                     
+                  </button>
+              
+                  
+
+                </div>
+              </form>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

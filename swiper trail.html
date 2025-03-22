@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
+    <title>Vertical Slider</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide textswap vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.sections {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ari_pods,
+.beats,
+.apple_watch,
+.galaxy_buds {
+    width: 100%;
+    height: 100vh;
+    padding: 0 80px;
+}
+
+.section_container {
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ari_pods {
+    background-color: #1C1C1C;
+}
+
+.beats {
+    background-color: #ffffffac;
+}
+
+.apple_watch {
+    background-color: #92B7FF;
+}
+
+
+.galaxy_buds {
+    background-color: #000;
+}
+
+.image {
+    width: 400px;
+}
+
+.image > img {
+    width: 100%;
+}
+
+.textswap {
+    width: 350px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: left;
+
+}
+
+.textswap > .title {
+    font-size:50px; 
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+.ari_pods > .section_container > .textswap {
+    font-weight: 100;
+    color: #fff;
+}
+
+.textswap > .description {
+    font-size: 20px;
+    font-weight: 100;
+    font-weight: 300;
+}
+
+.beats > .section_container > .image {
+    order: 2;
+    width: 500px;
+}
+
+
+
+.beats > .textswap {
+    color: #000;
+    font-size: medium;
+    font-weight: 100;
+}
+
+.galaxy_buds > .section_container > .textswap > .title {
+    font-size: 45px;
+}
+
+.galaxy_buds > .section_container > .textswap > .title > span {
+    font-weight: 500;
+}
+
+.galaxy_buds > .section_container > .textswap {
+    color: #fff;
+}
+
+.swiper-container-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite, 
+.swiper-container-vertical>.swiper-pagination-progressbar {
+    position: absolute;
+    left: 95%;
+    top: 25%;
+    height: 50%;
+}
+
+        </style>
+</head>
+<body>
+
+     <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="ari_pods sections">
+                        <div class="section_container">
+                            <div class="image">
+                            <img src="glowing-star_1f31f.gif" alt="error">
+                        </div>
+                        <div class="textswap">
+                            <p class="title">Unlock the Beauty of Telugu Literature and Grammar</p>
+                            <p class="description">
+                                Embark on a journey that unravels the enchanting world of Telugu
+                             literature, grammar, 
+                            and methodology with Adya Study Circle. We are dedicated to enriching
+                             your understanding and appreciation of the rich Telugu language.
+                            </p>
+                        </div></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="beats sections">
+                        <div class="section_container"><div class="image">
+                            <img src="transform class.gif" alt="error">
+
+                        </div>
+                        <div class="textswap">
+                            <p class="title">Online Classes for the Modern Learner:</p>
+                            <p class="description">We understand the demands of your busy lifestyle, which is why 
+                                we offer convenient and interactive online classes.
+                                 No matter where you are, you can now access our comprehensive courses at your own pace.
+                                  Our user-friendly platform ensures that learning Telugu has never been easier.</p>
+                        </div>
+                        
+                    </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="apple_watch sections">
+                        <div class="section_container">
+                            <div class="image">
+                                <img src="papershand.gif" alt="error">
+                            </div>
+
+                                <div class="textswap">
+                                    <p class="title">Structured Curriculum, <span>Personalized Learning:</span> </p>
+                                    <p class="description">Our courses are meticulously designed to cater to learners of all levels.
+                                        Whether you're a beginner or looking to deepen your understanding, we have the right program for you. 
+                                        Our personalized approach ensures that you receive the guidance you need to excel.</p>
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="galaxy_buds sections">
+                        <div class="section_container">
+                            <div class="image">
+                                <img src="tesseract_bulb_animation.gif" alt="error">
+
+
+                            </div>
+                            <div class="textswap">
+                                <p class="title">Experience the Adya Advantage:</p>
+                                <p class="description">- Engaging and interactive online classes
+                                    - Expert guidance from Teacher Sure Sreenivasulu 
+                                    - Comprehensive curriculum for all levels 
+                                   - Convenient scheduling to fit your lifestyle</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="beats sections">
+                        <div class="section_container"><div class="image">
+                            <img src="advertiser_dribbble.gif" alt="error">
+
+
+                        </div>
+                        <div class="textswap">
+
+                              <p class="title">Connect with a Community<hr></p><br>
+                              <p class="description">
+                                 Join a vibrant community of Telugu language enthusiasts. 
+                                  Connect with fellow learners, share insights, and engage in
+                                  discussions that deepen your understanding of the language
+                                </p>
+                        
+                       </div>
+                    </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="galaxy_buds sections">
+                        <div class="section_container">
+                            <div class="image">
+                                <img src="books.gif" alt="error">
+
+                        </div>
+                        <div class="textswap">
+                            <div class="textswap">
+                                <p class="title">Discover Telugu's Treasures with Teacher Sure Sreenivasulu:</p>
+                                <p class="description">At Adya Study Circle, we are honored to have the esteemed Teacher Sure Sreenivasulu as your guide.
+                                    With his profound knowledge and passion for Telugu, Teacher Sure Sreenivasulu will take you 
+                                    on a captivating exploration of Telugu literature,
+                                     grammar, and methodology</p>
+                            </div>
+                        </div></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="beats sections">
+                        <div class="section_container"><div class="image">
+                            <img src="cap.gif" alt="error">
+                        </div>
+                        <div class="textswap">
+                            <p class="title">What We Offer:<span>Telugu Literature:</p>
+                            <p class="description">  Dive into the world of Telugu literary masterpieces. 
+                                Explore classic and contemporary works that have shaped Telugu culture.
+                                 <span>Telugu Grammar:</span> Demystify the complexities of Telugu grammar. 
+                                 Learn the rules and nuances that make this language unique and expressive.
+                                  <span>Telugu Methodology: </span>Discover effective techniques for teaching and communicating in Telugu. 
+                                  Enhance your language skills to share your knowledge with others.</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="apple_watch sections" >
+                        <div class="section_container">
+                            <div class="image">
+                                <img src="contactus.gif" alt="">
+                            </div>
+                            <div class="textswap">
+                                <p class="title">Contact Us Today</p>
+                                <p class="description">
+                                    Ready to embark on your Telugu language journey? Contact us today to 
+                                    learn more about our courses, schedules, and enrollment options.
+                                     We're here to answer your questions and guide you toward a fulfilling Telugu learning experience.
+                                      At Adya Study Circle, we're not just teaching Telugu; we're fostering a connection to the soul of a language.
+                                       Join us and let the beauty of Telugu language and literature enrich your life. 
+                                    Enroll now and let the magic of Telugu unfold before you!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="swiper-pagination">
+
+            </div>
+        </div>
+        
+        <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="js/main.js"></script>
+     <script>
+        var swiper = new Swiper('.swiper-container', {
+    direction: 'vertical',
+    sliderPerView: 0,
+    spaceBetween: 0,
+    mousewheel: true,
+    pagination: {
+        el:'.swiper-pagination',
+        type: 'progressbar',
+    }
+}) 
+
+
+    </script>
+    </body>
+    </html>
+    
+    

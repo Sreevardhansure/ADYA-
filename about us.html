@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>aboutus</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <h3>ABOUT US</h3>
+    <h2 class="text">ABOUT US</h2>
+    <section>
+        <h2 class="innerText">ABOUT US</h2>
+    </section>
+    <div class="container">
+        <h2>Welcome to Adya Study Circle: Your Pathway to Telugu Excellence!</h2><br><br><br>
+        <br><br><br><br><br><br><br>
+        <div class="detel">
+            <h1>Ｉ,m Sure <span>Sreenivasulu</span></h1>
+            <p>I will guide you to become sucess in your life
+              <br>contact us:9866367300
+            </p>   
+            <a href="registraion.html">Join the class</a>
+        </div>
+        <div class="images">
+            <img src="splashbg.png" alt="error" class="shape">
+            <img src="profile.png" alt="error" class="profile">
+        </div>
+    </div>
+    <script>
+        let section = document.querySelector('section');
+        let text=document.querySelector('.text');
+        let innerText=document.querySelector('.innerText')
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            section.style.clipPath = "circle("+ value +"px at center center)";
+            text.style.left=100 - value /5+ '%'
+            innerText.style.left=100 - value /5+ '%'
+        })
+    </script>
+</body>
+</html>
